@@ -28,11 +28,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun countUp() {
         val resultText: TextView = findViewById(R.id.result_text)
-        val num = resultText.text.toString().toInt()
-        if (resultText.text == "Hello World!")
+        var num = resultText.text.toString().toIntOrNull()
+        if (num == null)
             resultText.text = "1"
-        else {
-            resultText.text = "1"
+        else if (num < 6) {
+            num++
+            resultText.text = num.toString()
         }
     }
 }
