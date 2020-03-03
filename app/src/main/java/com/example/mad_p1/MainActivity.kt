@@ -32,8 +32,7 @@ class MainActivity : AppCompatActivity() {
         if (resultText.text == "Hello World!")
             resultText.text = "1"
         else {
-
-            //resultText.text =
+            resultText.text = "1"
         }
     }
 }
